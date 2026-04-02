@@ -1,0 +1,65 @@
+@import "colors.css";
+
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font Propo";
+}
+
+tooltip {
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.modules-right {
+    background-color: black;
+    padding: 2px 8px;
+    border-radius: 99px;
+
+}
+
+.modules-left {
+    background-color: black;
+    padding: 2px 8px;
+    border-radius: 99px;
+}
+
+.modules-center {
+    background-color: black;
+    padding: 2px 8px;
+    border-radius: 99px;
+}
+
+#clock {
+    font-weight: 500;
+}
+
+#custom-pill {
+    background-color: #3b4252;
+    color: #eceff4;
+    border-radius: 20px; 
+    padding: 0px 15px;
+    margin: 4px 2px;
+}
+
+#workspaces {
+    background-color: red;
+    padding: 2px 4px;
+    margin: 2px 0;
+    border-radius: 99px;
+}
+
+#workspaces button {
+    background-color: blue;
+    padding: 2px 4px;
+    border-radius: 99px;
+    margin: 0 2px;
+    transition: all 300ms ease-in-out;
+    min-width: 7px;
+}
+
+#workspaces button.active {
+    background-color: green;
+    min-width: 1.5rem;
+}
