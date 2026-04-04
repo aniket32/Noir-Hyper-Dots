@@ -1,0 +1,8 @@
+{
+    "custom/launcher": {
+        "format": "󰣆", /* Minimalist Arch icon from Nerd Fonts */
+        "on-click": "bash /home/ab/.config/rofi/launcher/launcher.sh",
+        "on-click-right": "rofi -show run",
+        "tooltip": false
+    }
+}

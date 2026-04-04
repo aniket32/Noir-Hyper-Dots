@@ -1,0 +1,11 @@
+{
+    "upower": {
+        "native-path": "hidpp_battery_0",
+        "format": "󰍽 / ",
+        "show-icon": false,
+        "hide-if-empty": true,
+        "tooltip": true,
+        "tooltip-spacing": 10,
+        "tooltip-format": "{percentage}: solaar"
+    }
+}

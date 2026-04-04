@@ -1,0 +1,29 @@
+@define-color window_bg_color rgba(17, 17, 17, 0.85);
+@define-color window_fg_color #ffffff;
+@define-color view_bg_color #000000;
+@define-color view_fg_color #ffffff;
+
+
+@define-color sidebar_bg_color rgba(20, 20, 20, 0.9);
+@define-color sidebar_fg_color #a9a9a9;
+
+@define-color accent_bg_color #ffffff;
+@define-color accent_fg_color #000000;
+@define-color accent_color @accent_bg_color;
+
+headerbar {
+    background-color: #111111;
+    border-bottom: 1px solid #333333;
+    box-shadow: none;
+    color: #ffffff;
+}
+
+.view:selected {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 4px;
+}
+
+.navigation-sidebar {
+    border-right: 1px solid #222222;
+}

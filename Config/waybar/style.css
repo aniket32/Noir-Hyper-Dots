@@ -1,0 +1,124 @@
+@import "colors/noir.css";
+
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font", "Symbols Nerd Font", sans-serif;
+}
+
+#pill-left1,
+#pill-left2,
+#pill-center1,
+#pill-center2,
+#pill-center3,
+#pill-right1,
+#pill-right2,
+#pill-right3,
+#pill-right4,
+#pill-right5 {
+    background-color: @bg_soft;
+    color: @fg_main;
+    border-radius: 99px;
+    padding: 2px 12px;
+    margin: 0px 4px;
+    border: 1px solid @border_inact;
+    transition: all 300ms ease-in-out;
+}
+
+#pill-left1:hover,
+#pill-left2:hover,
+#pill-center1:hover,
+#pill-center2:hover,
+#pill-center3:hover,
+#pill-right1:hover,
+#pill-right2:hover,
+#pill-right3:hover,
+#pill-right4:hover,
+#pill-right5:hover  {
+    background-color: @bg_hover;
+    border: 1px solid @border-dim;
+}
+
+#pill-left1:active,
+#pill-left1:active,
+#pill-center1:active,
+#pill-center2:active,
+#pill-center3:active,
+#pill-right1:active,
+#pill-right2:active,
+#pill-right3:active,
+#pill-right4:active,
+#pill-right5:active,
+#custom-launcher:active {
+    background-color: @fg_main;
+    color: @bg_hard;
+    transition: 0ms;
+}
+
+#pill-right2>widget {
+    padding: 0px 8px;
+}
+
+#pill-right2 #network {
+    margin-right: 15px;
+}
+
+/* Active State: Network and Bluetooth when connected/on */
+#pill-right2 #network,
+#pill-right2 #bluetooth {
+    color: @fg_main;
+    background: transparent;
+    padding: 0 5px;
+}
+
+/* Prominent Off/Disabled State */
+/* We use @fg_dim to ensure it is visible but distinctly 'inactive' */
+#pill-right2 #bluetooth.off,
+#pill-right2 #bluetooth.disabled,
+#pill-right2 #network.disconnected {
+    color: @fg_dim;
+    /* Optional: Add a subtle background to make the "pill" feel occupied */
+    background: @bg_soft;
+    border-radius: 4px;
+}
+
+#workspaces button {
+    color: @fg_dim;
+    background: transparent;
+    border-radius: 99px;
+    padding: 0px 6px;
+    margin: 0px 2px;
+    transition: all 300ms ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: @bg_hover;
+    color: @fg_main;
+}
+
+#workspaces button.active {
+    background-color: @fg_main;
+    color: @bg_hard;
+    min-width: 24px;
+    transition: all 300ms ease-in-out;
+}
+
+#workspaces button.active:hover {
+    background-color: @fg_main;
+    color: @bg_hard;
+}
+
+tooltip {
+    background: @bg_soft;
+    border: 1px solid @border_inact;
+}
+
+tooltip label {
+    color: @fg_main;
+}
+
+#pill-center3.hidden {
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+}

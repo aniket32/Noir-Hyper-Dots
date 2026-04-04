@@ -1,0 +1,173 @@
+/*****----- Configuration -----*****/
+configuration {
+    modi:                        "dmenu";
+    show-icons:                  true;
+    dmenu-display-format:        "{name}";
+}
+
+/*****----- Global Properties -----*****/
+@import "shared/colors.rasi"
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       590px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    border-radius:               20px;
+
+    background-color:            @background;
+
+    border:                      2px;           /* RASI uses numeric values for width */
+    border-color:                @background-alt;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+}
+
+listbox {
+    spacing:                     0px;
+    padding:                     10px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "listview" ];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     15px;
+    border-radius:               10px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    background-color:            inherit;
+    text-color:                  inherit;
+    padding:                     0px 10px 0px 0px;
+    vertical-align:              0.5;   
+    horizontal-align:            0.5;   
+    font:                        "JetBrainsMono Nerd Font 12"; 
+}
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
+    vertical-align:              0.5;  
+    padding:                     0px; 
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;      
+    lines:                       2;      
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                false;
+
+    spacing:                     10px;  
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- Element -----*****/
+element {
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     0px;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    children:                    [ "element-icon" ]; 
+}
+
+element-icon {
+    background-color:            transparent;
+    size:                        500px; 
+    cursor:                      inherit;
+    horizontal-align:            0.5;
+    vertical-align:              0.5;
+    border-radius:               15px;
+    cursor:                      pointer;
+    expand:                      true;
+}
+
+element selected.normal {
+    background-color:            @selected; 
+    text-color:                  @foreground;
+    border:                      0px 0px 0px 4px;
+    border-color:                @urgent;
+    border-radius:               20px;
+}
+
+element normal.urgent {
+    background-color:            @urgent;
+    text-color:                  @foreground;
+}
+
+element normal.active {
+    background-color:            @active;
+    text-color:                  @foreground;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+
+element selected.urgent {
+    background-color:            @urgent;
+    text-color:                  @foreground;
+}
+
+element selected.active {
+    background-color:            @urgent;
+    text-color:                  @foreground;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:            transparent;
+}
+textbox {
+    padding:                     15px;
+    border-radius:               10px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     15px;
+    border-radius:               20px;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
