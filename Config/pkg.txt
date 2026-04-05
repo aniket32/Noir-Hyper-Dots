@@ -16,6 +16,7 @@ firefox
 git
 grim
 grub
+waybar
 hyprland
 hyprlock
 iptables-nft
@@ -40,7 +41,6 @@ qt5-declarative
 rofi
 sddm
 sddm-kcm
-sddm-silent-theme
 slurp
 solaar
 sudo
