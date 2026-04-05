@@ -1,0 +1,8 @@
+{
+    "custom/media": {
+        "exec": "~/.config/waybar/scripts/play_pause.sh",
+        "interval": 1,
+        "on-click": "playerctl play-pause",
+        "tooltip": false
+    }
+}

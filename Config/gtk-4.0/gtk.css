@@ -1,0 +1,6 @@
+/* --- Thunar Specific Noir Theme --- */
+@define-color bg_hard #000000;
+@define-color bg_soft #0d0d0d;
+@define-color fg_main #ffffff;
+@define-color fg_dim  #aaaaaa;
+@define-color border_inact #222222;

@@ -1,0 +1,23 @@
+{
+    "wlr/taskbar": {
+        "name": "taskbar",
+        "format": "{icon}",
+        "icon-size": 18,
+        "all-outputs": true,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "Kitty"
+        ],
+        "app_ids-mapping": {
+            "firefoxdeveloperedition": "firefox-developer-edition"
+        },
+        "rewrite": {
+            "vlc": "Video Player",
+            "(.*) - Mozilla Firefox": "Firefox", 
+            "(.*) - Visual Studio Code": "VS Code [$1]", 
+            "terminal": "Prompt"
+        }
+    }
+}

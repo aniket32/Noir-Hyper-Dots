@@ -1,0 +1,31 @@
+[
+    // --- MONITOR 1 (PRIMARY) ---
+    {
+        "output": "DP-2",
+        "layer": "top",
+
+        "include": ["~/.config/waybar/modules/all_modules.jsonc"],
+
+        "modules-left": ["custom/fetch","custom/launcher","wlr/taskbar"],
+
+        "modules-center": ["hyprland/workspaces","clock","custom/updates"],
+
+        "modules-right": ["group/pill-right2","group/pill-right","custom/sysinfo",
+                "custom/upower","power-profiles-daemon","custom/power"],
+
+        "group/pill-right": {"orientation": "inherit",
+            "modules": ["network", "bluetooth"]},
+
+        "group/pill-right2": {"orientation": "inherit",
+            "modules": ["pulseaudio","custom/media","pulseaudio/slider"]}
+    },
+    // --- MONITOR 2 ---
+    {
+        "output": "HDMI-A-1",
+        "layer": "top",
+        "include": ["~/.config/waybar/modules/all_modules.jsonc"],
+        "modules-center": ["hyprland/workspaces"],
+
+        "modules-right": ["custom/brightness"]
+    }
+]

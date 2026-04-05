@@ -1,0 +1,16 @@
+{
+    "custom/brightness": {
+        "exec": "~/.config/waybar/scripts/brightness.sh",
+        "return-type": "json",
+        "signal": 1, 
+        "format": "{icon} {text}",
+        "format-icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
+        "on-scroll-up": "ddcutil setvcp 10 + 20 --noverify && pkill -RTMIN+1 waybar",
+        "on-scroll-down": "ddcutil setvcp 10 - 20 --noverify && pkill -RTMIN+1 waybar",
+        "tooltip": true
+    }
+}
