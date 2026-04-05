@@ -6,8 +6,8 @@ SOURCE_DIR="$SCRIPT_DIR/Config"
 BACKUP_DIR="$HOME/.config/hypr_backup_$(date +%Y%m%d_%H%M%S)"
 
 # Package Lists
-PACMAN_PKG="$SCRIPT_DIR/pkg.txt"
-YAY_PKG="$SCRIPT_DIR/yay.txt"
+PACMAN_PKG="$SOURCE_DIR/pkg.txt"
+YAY_PKG="$SOURCE_DIR/yay.txt"
 
 echo "Starting installation for AB..."
 
