@@ -5,24 +5,22 @@ Hate, anxiety and sleep deprived Hyprland config born out of severy procrastinat
 * **`Config/`**: Contains the source configuration folders (Hyprland, Waybar, Kitty, etc.).
 * **`install.sh`**: A Bash script that automates package installation and symbolic linking.
 * **`pkg.txt`**: A curated list of explicit dependencies (apps, drivers, and fonts).
-
----
-
+* 
 ## ## Installation
 
 1. **Clone the repository:**
   git clone
   cd ~/hypr-dots
 
-2. **Make the script executable:**
+3. **Make the script executable:**
    chmod +x install.sh
-3. **Install:**
+4. **Install:**
    ./install.sh
 
-## ## Resource
+## Resources
 
-sameAspect: www.youtube.com/watch?v=Pqlk6KDqDJo&t=7805s
-https://github.com/hyprwm/hyprland
-https://github.com/adi1090x/rofi
-https://github.com/alexays/waybar
-https://github.com/morhetz/gruvbox
+- [sameAspect YouTube video](https://www.youtube.com/watch?v=Pqlk6KDqDJo&t=7805s)
+- [Hyprland GitHub](https://github.com/hyprwm/hyprland)
+- [Rofi GitHub](https://github.com/adi1090x/rofi)
+- [Waybar GitHub](https://github.com/alexays/waybar)
+- [Gruvbox GitHub](https://github.com/morhetz/gruvbox)
