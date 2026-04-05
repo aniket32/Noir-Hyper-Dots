@@ -14,7 +14,7 @@ If you want to use it, please adjust some of the configs to fit your own needs.
 ## ## Installation
 ```bash
 # Clone the repo
-git clone https://github.com/aniket32/Noir-Hyper-Dots.git && cd Noir-Hyper-Dots
+git clone https://github.com/aniket32/Noir-Hypr-Dots.git && cd Noir-Hypr-Dots
 # Make the install script executable
 chmod +x install.sh
 # Run the installation script
