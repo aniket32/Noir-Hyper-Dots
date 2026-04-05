@@ -21,6 +21,6 @@ Hate, anxiety and sleep deprived Hyprland config born out of severy procrastinat
 
 - [sameAspect YouTube video](https://www.youtube.com/watch?v=Pqlk6KDqDJo&t=7805s)
 - [Hyprland GitHub](https://github.com/hyprwm/hyprland)
-- [Rofi GitHub](https://github.com/adi1090x/rofi)
+- [Rofi Theme GitHub](https://github.com/adi1090x/rofi)
 - [Waybar GitHub](https://github.com/alexays/waybar)
-- [Gruvbox GitHub](https://github.com/morhetz/gruvbox)
+- [Gruvbox Color Scheme GitHub](https://github.com/morhetz/gruvbox)
