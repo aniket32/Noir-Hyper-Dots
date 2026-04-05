@@ -5,7 +5,12 @@ Hate, anxiety and sleep deprived Hyprland config born out of severy procrastinat
 * **`Config/`**: Contains the source configuration folders (Hyprland, Waybar, Kitty, etc.).
 * **`install.sh`**: A Bash script that automates package installation and symbolic linking.
 * **`pkg.txt`**: A curated list of explicit dependencies (apps, drivers, and fonts).
-* 
+
+## Note
+
+This setup is highly customized for my personal use and preferences.  
+If you want to use it, please adjust some of the configs to fit your own needs.
+
 ## ## Installation
 
 1. **Clone the repository:**
