@@ -14,7 +14,6 @@ hyprland
 hyprlock
 hypridle
 hyprcursor
-waybar-cava
 dunst
 rofi
 swww
@@ -29,7 +28,6 @@ fastfetch
 ripgrep
 jq
 git
-yay
 nano
 stow
 firefox
