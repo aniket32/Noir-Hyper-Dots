@@ -1,6 +1,6 @@
 # Personal Hyprland Dotfiles
 
-
+Hate, anxiety and sleep deprived Hyprland config born out of procrastination. Instead of writing papers, I wrote these configs. If you’re looking for academic productivity, this isn’t it. But if you want a “rice” that looks better than my experimental results, welcome aboard.
 
 * **`Config/`**: Contains the source configuration folders (Hyprland, Waybar, Kitty, etc.).
 * **`install.sh`**: A Bash script that automates package installation and symbolic linking.
