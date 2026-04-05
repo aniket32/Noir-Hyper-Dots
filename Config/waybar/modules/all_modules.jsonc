@@ -1,0 +1,22 @@
+{
+    "include": [
+        "~/.config/waybar/modules/clock.jsonc",
+        "~/.config/waybar/modules/workspaces.jsonc",
+        "~/.config/waybar/modules/bluetooth.jsonc",
+        "~/.config/waybar/modules/network.jsonc",
+        "~/.config/waybar/modules/pulseaudio.jsonc",
+        "~/.config/waybar/modules/battery.jsonc",
+        "~/.config/waybar/modules/power.jsonc",
+        "~/.config/waybar/modules/rofi.jsonc",
+        "~/.config/waybar/modules/fetch.jsonc",
+        "~/.config/waybar/modules/upower.jsonc",
+        "~/.config/waybar/modules/power_profile.jsonc",
+        "~/.config/waybar/modules/updates.jsonc",
+        "~/.config/waybar/modules/system_info.jsonc",
+        "~/.config/waybar/modules/taskbar.jsonc",
+        "~/.config/waybar/modules/cava.jsonc",
+        "~/.config/waybar/modules/pulse_slider.jsonc",
+        "~/.config/waybar/modules/play_pause.jsonc",
+        "~/.config/waybar/modules/brightness.jsonc"
+    ]
+}
