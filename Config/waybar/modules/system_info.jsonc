@@ -1,0 +1,9 @@
+{
+    "custom/sysinfo": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 5,
+        "exec": "~/.config/waybar/scripts/sys_info.sh",
+        "return-type": "json"
+    }
+}

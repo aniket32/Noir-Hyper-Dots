@@ -1,0 +1,7 @@
+{
+    "custom/fetch": {
+        "format": "󰣇",
+        "tooltip": false,
+        "on-click": "bash ~/.config/waybar/scripts/fetch.sh"
+    }
+}

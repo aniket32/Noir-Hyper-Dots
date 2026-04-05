@@ -1,0 +1,10 @@
+{
+    "custom/upower": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "/home/ab/.config/waybar/scripts/dev_connected.sh",
+        "interval": 10,
+        "tooltip": true,
+        "escape": true
+    }
+}
