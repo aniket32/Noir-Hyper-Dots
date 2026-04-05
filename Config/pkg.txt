@@ -18,6 +18,7 @@ grim
 grub
 hyprland
 hyprlock
+waybar
 iptables-nft
 iwd
 jq
