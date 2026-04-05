@@ -1,4 +1,4 @@
-# Currently the install.sh script is not working, please manually copy over the config files
+# Currently the install.sh script is half working, packages are installed but some are not being enabled; need to manually enable/start them
 
 
 # Personal Hyprland Dotfiles
