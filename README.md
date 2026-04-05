@@ -28,3 +28,4 @@ chmod +x install.sh
 - [Rofi Theme GitHub](https://github.com/adi1090x/rofi)
 - [Waybar GitHub](https://github.com/alexays/waybar)
 - [Gruvbox Color Scheme GitHub](https://github.com/morhetz/gruvbox)
+- [Hyde Project](https://github.com/hyde-project/hyde)
