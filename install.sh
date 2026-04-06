@@ -22,7 +22,7 @@ fi
 
 # Bootstrap YAY
 if ! command -v yay &> /dev/null; then
-    echo "🐣 Yay not found. Bootstrapping Yay from AUR..."
+    echo "Yay not found. Bootstrapping Yay from AUR..."
     TEMP_DIR=$(mktemp -d)
     git clone https://aur.archlinux.org/yay.git "$TEMP_DIR"
     cd "$TEMP_DIR" || exit
