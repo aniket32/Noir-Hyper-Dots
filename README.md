@@ -22,6 +22,7 @@ git clone https://github.com/aniket32/Noir-Hypr-Dots.git && cd Noir-Hypr-Dots
 chmod +x install.sh
 # Run the installation script
 ./install.sh 
+```
 
 ## Resources
 
