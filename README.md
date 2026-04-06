@@ -14,7 +14,6 @@ Hate, anxiety and sleep deprived Hyprland config born out of severy procrastinat
 This setup is highly customized for my personal use and preferences.  
 If you want to use it, please adjust some of the configs to fit your own needs.
 
-<!--
 ## ## Installation
 ```bash
 # Clone the repo
@@ -23,9 +22,6 @@ git clone https://github.com/aniket32/Noir-Hypr-Dots.git && cd Noir-Hypr-Dots
 chmod +x install.sh
 # Run the installation script
 ./install.sh 
---->
-
-
 
 ## Resources
 
