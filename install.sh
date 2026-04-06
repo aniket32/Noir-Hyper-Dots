@@ -67,35 +67,31 @@ else
     exit 1
 fi
 
-# Define Icon Set Variables
+# Define Icon Variables
 ICON_URL="https://bitbucket.org/dirn-typo/yet-another-monochrome-icon-set/get/main.tar.gz"
 ICON_DEST="$HOME/.local/share/icons"
 
-echo "Installing Yet Another Monochrome Icon Set..."
-
-# Ensure the local icons directory exists
+echo "Downloading and installing Yet Another Monochrome Icon Set..."
 mkdir -p "$ICON_DEST"
 
-# Download and extract directly to the icons folder
-# -L follows redirects, tar --strip-components=1 removes the top-level folder from the archive
-echo "Downloading and extracting icons..."
+# Use a temp directory to handle the dynamic folder name from Bitbucket
 TEMP_ICON_DIR=$(mktemp -d)
 curl -L "$ICON_URL" | tar -xz -C "$TEMP_ICON_DIR"
 
-# Move the actual icon folders to the destination
-# Assuming the repo contains folders that are valid icon themes
-cp -r "$TEMP_ICON_DIR"/* "$ICON_DEST/"
+# Identify the extracted folder (it changes name based on the commit hash)
+EXTRACTED_FOLDER=$(find "$TEMP_ICON_DIR" -maxdepth 1 -type d -name "dirn-typo-*" | head -n 1)
 
-# Cleanup
+if [ -d "$EXTRACTED_FOLDER" ]; then
+    # Move the contents of the extracted folder into ~/.local/share/icons
+    cp -r "$EXTRACTED_FOLDER" "$ICON_DEST/YAM-Icons"
+    echo "Icons installed to $ICON_DEST/YAM-Icons"
+else
+    echo "Error: Could not locate extracted icon folder."
+fi
+
 rm -rf "$TEMP_ICON_DIR"
 
 echo "Icon set installed to $ICON_DEST"
-
-echo "Setup complete"
-echo "System will reboot in 10 seconds..."
-echo "Press Ctrl+C to cancel reboot and check logs."
-
-
 
 # Post-install setup 
 echo "Running post-install setup for services and additional configuration..."
@@ -124,7 +120,7 @@ post_install() {
     systemctl --user enable pipewire pipewire-pulse wireplumber
     systemctl --user start pipewire pipewire-pulse wireplumber
 
-    # Optional: enable power management daemon
+    # Enable power management daemon
     if systemctl list-unit-files | grep -q "^power-profiles-daemon"; then
         echo "Enabling power-profiles-daemon..."
         sudo systemctl enable power-profiles-daemon
@@ -138,9 +134,46 @@ post_install() {
     fi
     xdg-user-dirs-update
 
+    # Apply specific GTK Settings
+    echo "Applying custom GTK settings..."
+    for version in "3.0" "4.0"; do
+        mkdir -p "$HOME/.config/gtk-$version"
+        cat <<EOF > "$HOME/.config/gtk-$version/settings.ini"
+[Settings]
+gtk-theme-name=Adwaita
+gtk-icon-theme-name=YAM-Icons
+gtk-font-name=JetBrainsMono Nerd Font Ultra-Bold 11
+gtk-cursor-theme-name=default
+gtk-cursor-theme-size=24
+gtk-toolbar-style=GTK_TOOLBAR_ICONS
+gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+gtk-button-images=0
+gtk-menu-images=0
+gtk-enable-event-sounds=1
+gtk-enable-input-feedback-sounds=1
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle=hintmedium
+gtk-xft-rgba=rgb
+gtk-application-prefer-dark-theme=1
+gtk-decoration-layout=:
+EOF
+    done
+
+    # Force an icon cache update for YAM-Icons
+    if [ -d "$ICON_DEST/YAM-Icons" ]; then
+        gtk-update-icon-cache -f -t "$ICON_DEST/YAM-Icons" > /dev/null 2>&1
+    fi
+
+    echo "GTK settings and YAM-Icons activated."
+
 }
 
 post_install
+
+echo "Setup complete"
+echo "System will reboot in 10 seconds..."
+echo "Press Ctrl+C to cancel reboot and check logs."
 
 #  Countdown and Reboot
 sleep 10
