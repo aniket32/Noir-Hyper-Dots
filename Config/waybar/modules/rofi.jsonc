@@ -1,7 +1,7 @@
 {
     "custom/launcher": {
         "format": "󰣆",
-        "on-click": "bash /home/ab/.config/rofi/launcher/launcher.sh",
+        "on-click": "bash ~/.config/rofi/launcher/launcher.sh",
         "on-click-right": "rofi -show run",
         "tooltip": false
     }
