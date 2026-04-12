@@ -1,19 +1,21 @@
 {
     "wireplumber": {
-        // "format": "{volume}% {icon}",
         "format": "{icon}",
         "format-bluetooth": "{volume}% {icon}",
         "format-muted": "",
         "format-icons": {
             "headphone": "",
             "headset": "",
-            // "phone": "",
-            // "phone-muted": "",
-            // "portable": "",
             "default": [
                 "",
+                "",
+                "",
+                "",
                 "",
                 "󰕾",
+                "󰕾",
+                "",
+                "",
                 ""
             ]
         },
